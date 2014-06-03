@@ -51,7 +51,10 @@ def log_fail expected,got,attempts
       attempts[direction]
       log "Direction: #{direction}"
       log "Query: #{attempts[direction][:query]}"
-      log "Response: #{attempts[direction][:response].body}"
+      if attempts[direction][:response]
+        s = attempts[direction][:response].body
+      end
+      log "Response: #{s}"
       log
     end
   end

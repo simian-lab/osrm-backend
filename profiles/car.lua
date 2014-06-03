@@ -42,7 +42,7 @@ local use_turn_restrictions     = true
 local ignore_areas              = true     -- future feature
 local u_turn_penalty            = 20
 
--- surface/trackype/smoothness speeds was estimated from
+-- surface/trackype/smoothness max speeds was estimated from
 -- looking the the photos at the relevant wiki pages
 surface_speed = {
   ["asphalt"] = 200,
@@ -72,7 +72,7 @@ surface_speed = {
 
   ["cobblestone"] = 30,
   ["clay"] = 30,
-  ["earth"] = 20,
+  ["earth"] = 30,
 
   ["stone"] = 20,
   ["rocky"] = 20,
@@ -81,18 +81,20 @@ surface_speed = {
   ["mud"] = 10
 }
 tracktype_speed = {
-  ["grade1"] =  60,
-  ["grade2"] =  40,
+  ["grade1"] =  40,
+  ["grade2"] =  35,
   ["grade3"] =  30,
   ["grade4"] =  25,
   ["grade5"] =  20
 }
 smoothness_speed = {
+  ["excellent"]       =  320,
+  ["good"]            =  160,
   ["intermediate"]    =  80,
   ["bad"]             =  40,
   ["very_bad"]        =  20,
-  ["horible"]         =  10,
-  ["very_horible"]    =  5,
+  ["horrible"]        =  10,
+  ["very_horrible"]   =  5,
   ["impassable"]      =  0
 }
 
