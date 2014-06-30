@@ -14,6 +14,10 @@ When(/^I run "osrm\-prepare\s?(.*?)"$/) do |options|
   run_bin 'osrm-prepare', options
 end
 
+When(/^I run "osrm\-datastore\s?(.*?)"$/) do |options|
+  run_bin 'osrm-datastore', options
+end
+
 Then /^it should exit with code (\d+)$/ do |code|
   @exit_code.should == code.to_i
 end
