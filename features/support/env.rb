@@ -18,7 +18,7 @@ BIN_PATH = File.join ROOT_FOLDER, 'build'
 DEFAULT_INPUT_FORMAT = 'osm'
 DEFAULT_ORIGIN = [1,1]
 LAUNCH_TIMEOUT = 1
-SHUTDOWN_TIMEOUT = 1
+SHUTDOWN_TIMEOUT = 10
 
 
 def log_time_and_run cmd

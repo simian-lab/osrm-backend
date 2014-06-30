@@ -1,6 +1,6 @@
 When(/^I run "osrm\-routed\s?(.*?)"$/) do |options|
   begin
-    Timeout.timeout(1) { run_bin 'osrm-routed', options }
+    Timeout.timeout(SHUTDOWN_TIMEOUT) { run_bin 'osrm-routed', options }
   rescue Timeout::Error
     raise "*** osrm-routed didn't quit. Maybe the --trial option wasn't used?"
   end
