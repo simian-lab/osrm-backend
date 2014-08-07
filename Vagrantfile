@@ -1,0 +1,13 @@
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+# This is a copy of the Vagrantfile from the "Gerente" project.
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "precise64"
+  config.vm.provision :shell, :path => 'vagrant.sh'
+  config.vm.network 'private_network', ip: '192.168.100.110'
+
+  # This may be overkill
+  config.vm.synced_folder ".", "/vagrant", :mount_options => ["dmode=777","fmode=777"], :owner => "vagrant"
+end
